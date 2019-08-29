@@ -575,7 +575,7 @@ service vendor.tftp_server /vendor/bin/tftp_server
 
 service vendor.qmuxd /vendor/bin/qmuxd
     class main
-    user root
+    user radio
     group radio audio bluetooth gps nfc diag
 
 service vendor.netmgrd /vendor/bin/netmgrd
