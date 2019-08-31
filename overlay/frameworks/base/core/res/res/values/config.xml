@@ -426,12 +426,12 @@
 
    <!-- Default files to pin via Pinner Service -->
    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
-       <item>"/system/framework/arm64/boot-framework.oat"</item>
+       <item>"/system/framework/arm/boot-framework.oat"</item>
        <item>"/system/framework/framework.jar"</item>
-       <item>"/system/framework/oat/arm64/services.odex"</item>
+       <item>"/system/framework/oat/arm/services.odex"</item>
        <item>"/system/framework/services.jar"</item>
-       <item>"/system/framework/arm64/boot.oat"</item>
-       <item>"/system/framework/arm64/boot-core-libart.oat"</item>
+       <item>"/system/framework/arm/boot.oat"</item>
+       <item>"/system/framework/arm/boot-core-libart.oat"</item>
        <item>"/system/framework/boot-QPerformance.vdex"</item>
        <item>"/system/framework/boot-UxPerformance.vdex"</item>
        <item>"/apex/com.android.runtime/javalib/core-oj.jar"</item>
@@ -443,8 +443,8 @@
     <string-array translatable="false" name="config_apexBootImagePinnerServiceFiles">
         <item>"/system/framework/framework.jar"</item>
         <item>"/system/framework/services.jar"</item>
-        <item>"/system/framework/arm64/apex.oat"</item>
-        <item>"/system/framework/arm64/apex-core-libart.oat"</item>
+        <item>"/system/framework/arm/apex.oat"</item>
+        <item>"/system/framework/arm/apex-core-libart.oat"</item>
         <item>"/apex/com.android.runtime/javalib/core-oj.jar"</item>
         <item>"/apex/com.android.runtime/javalib/core-libart.jar"</item>
         <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
