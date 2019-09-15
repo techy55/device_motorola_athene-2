@@ -333,7 +333,8 @@ PRODUCT_PACKAGES += \
     vndk-sp
 
 PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v27/arm/arch-arm-armv7-a-neon/shared/vndk-core/android.hardware.gnss@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.gnss@1.0-v27.so
+    prebuilts/vndk/v27/arm/arch-arm-armv7-a-neon/shared/vndk-core/android.hardware.gnss@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.gnss@1.0-v27.so \
+    prebuilts/vndk/v28/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbase-v28.so
 
 # Wifi
 PRODUCT_PACKAGES += \
