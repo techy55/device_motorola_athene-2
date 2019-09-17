@@ -29,11 +29,11 @@
 #define LOG_NDEBUG 0
 #define LOG_TAG "LocSvc_DualCtx"
 
-#include <processgroup/sched_policy.h>
+#include <cutils/sched_policy.h>
 #include <unistd.h>
 #include <LocDualContext.h>
 #include <msg_q.h>
-#include <log_util.h>
+#include <platform_lib_log_util.h>
 #include <loc_log.h>
 
 namespace loc_core {

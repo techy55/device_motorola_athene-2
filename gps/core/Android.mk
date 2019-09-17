@@ -6,7 +6,8 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := libloc_core
-LOCAL_VENDOR_MODULE := true
+LOCAL_MODULE_PATH_32 := $(TARGET_OUT_VENDOR)/lib
+LOCAL_MODULE_PATH_64 := $(TARGET_OUT_VENDOR)/lib64
 LOCAL_MODULE_TAGS := optional
 
 ifeq ($(TARGET_DEVICE),apq8026_lw)
@@ -19,10 +20,10 @@ LOCAL_SHARED_LIBRARIES := \
     liblog \
     libutils \
     libcutils \
-    libprocessgroup \
     libgps.utils \
     libdl \
-    liblog
+    liblog \
+    libloc_pla
 
 LOCAL_SRC_FILES += \
     LocApiBase.cpp \
@@ -31,12 +32,14 @@ LOCAL_SRC_FILES += \
     LocDualContext.cpp \
     loc_core_log.cpp \
     data-items/DataItemsFactoryProxy.cpp \
+    data-items/common/ClientIndex.cpp \
+    data-items/common/DataItemIndex.cpp \
+    data-items/common/IndexFactory.cpp \
     SystemStatusOsObserver.cpp \
     SystemStatus.cpp
 
 LOCAL_CFLAGS += \
      -fno-short-enums \
-     -Wno-reinterpret-base-class \
      -D_ANDROID_
 
 LOCAL_C_INCLUDES:= \
@@ -45,7 +48,6 @@ LOCAL_C_INCLUDES:= \
     $(LOCAL_PATH)/observer \
 
 LOCAL_HEADER_LIBRARIES := \
-    libutils_headers \
     libgps.utils_headers \
     libloc_pla_headers \
     liblocation_api_headers
