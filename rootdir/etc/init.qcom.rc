@@ -573,6 +573,11 @@ service vendor.tftp_server /vendor/bin/tftp_server
     user root
     writepid /dev/cpuset/system-background/tasks
 
+service vendor.qmuxd /vendor/bin/qmuxd
+    class main
+    user root
+    group radio audio bluetooth gps nfc diag
+
 service vendor.netmgrd /vendor/bin/netmgrd
     class main
     user root
