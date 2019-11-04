@@ -1,0 +1,2 @@
+add_lunch_combo havoc_athene-eng
+add_lunch_combo havoc_athene-userdebug
