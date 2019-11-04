@@ -75,6 +75,10 @@ PRODUCT_COPY_FILES += \
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 
+# APNs
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/apns-conf.xml:system/etc/apns-conf.xml
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
@@ -121,7 +125,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Disable Vulkan
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.graphics.vulkan.disable=true
- 
+
 # MotoActions
 PRODUCT_PACKAGES += \
     MotoActions
