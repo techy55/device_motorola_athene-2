@@ -84,6 +84,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
+  dalvik.vm.heapgrowthlimit=128m \
+	dalvik.vm.heapminfree=6m \
+	dalvik.vm.heapstartsize=8m \
+	dalvik.vm.heapsize=256m \
+	dalvik.vm.heaptargetutilization=0.75 \
+	dalvik.vm.heapmaxfree=8m \
+	dalvik.vm.zygotemaxfailedboots=5 \
+	dalvik.vm.foreground-heap-growth-multiplier=2.0 \
+	dalvik.vm.dex2oat-flags=--no-watch-dog \
 	dalvik.vm.boot-dex2oat-threads=4 \
 	dalvik.vm.dex2oat-threads=2 \
 	dalvik.vm.image-dex2oat-threads=4 \
@@ -91,8 +100,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	dalvik.vm.isa.arm.variant=cortex-a53
 
 # DEX
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.sys.fw.dex2oat_thread_count=4
+#PRODUCT_PROPERTY_OVERRIDES += \
+#	ro.sys.fw.dex2oat_thread_count=4
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
