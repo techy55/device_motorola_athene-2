@@ -1,2 +1,2 @@
-add_lunch_combo havoc_athene-eng
-add_lunch_combo havoc_athene-userdebug
+add_lunch_combo potato_athene-eng
+add_lunch_combo potato_athene-userdebug

@@ -15,4 +15,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/havoc_athene.mk
+    $(LOCAL_DIR)/potato_athene.mk

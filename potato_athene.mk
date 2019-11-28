@@ -16,8 +16,8 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Havoc stuff.
-$(call inherit-product, vendor/havoc/config/common.mk)
+# Inherit some common potato stuff.
+$(call inherit-product, vendor/potato/config/common_full_phone.mk)
 
 # Inherit from athene device
 $(call inherit-product, device/motorola/athene/device.mk)
@@ -29,7 +29,7 @@ TARGET_BOOTANIMATION_HALF_RES := true
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := athene
-PRODUCT_NAME := havoc_athene
+PRODUCT_NAME := potato_athene
 PRODUCT_RELEASE_NAME := athene
 PRODUCT_BRAND := Motorola
 PRODUCT_MANUFACTURER := Motorola
