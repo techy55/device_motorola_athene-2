@@ -438,8 +438,6 @@
        <item>"/product/priv-app/SystemUI/SystemUI.apk"</item>
        <item>"/product/priv-app/SystemUI/oat/arm/SystemUI.odex"</item>
        <item>"/system/lib/libsurfaceflinger.so"</item>
-       <item>"/system/framework/boot-QPerformance.vdex"</item>
-       <item>"/system/framework/boot-UxPerformance.vdex"</item>
    </string-array>
 
    <!-- List of files pinned by the Pinner Service with the apex boot image -->
