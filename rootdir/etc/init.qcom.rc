@@ -33,12 +33,17 @@ on early-init
     chown system system /sys/kernel/debug
     chmod 0755 /sys/kernel/debug
 
-    mkdir /firmware 0771 system system
-    mkdir /customize 0500 root root
-    mkdir /dsp 0771 media media
-    mkdir /fsg 755 root root
-    mkdir /system 0777 root root
+    #mkdir /firmware 0771 system system
+    #mkdir /customize 0500 root root
+    #mkdir /dsp 0771 media media
+    #mkdir /fsg 755 root root
+    #mkdir /system 0777 root root
 
+    # create symlink for vendor mount points
+    symlink /vendor/firmware_mnt /firmware
+    symlink /vendor/dsp /dsp
+    symlink /vendor/fsg /fsg
+    
     symlink /data/vendor/tombstones /tombstones
 
 on init
@@ -320,11 +325,11 @@ on fs
     mount_all ./vendor/etc/fstab.qcom --early
 
     wait /dev/block/bootdevice/by-name/dsp
-    mount ext4 /dev/block/bootdevice/by-name/dsp /dsp nosuid nodev barrier=1
+    mount ext4 /dev/block/bootdevice/by-name/dsp /vendor/dsp nosuid nodev barrier=1
 
     mkdir /persist/data 0700  system system
-    restorecon_recursive /persist
 
+    restorecon_recursive /persist
     restorecon_recursive /dsp
 
     # use /persist as phony PDS partition
