@@ -156,7 +156,8 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8952 \
     memtrack.msm8952 \
 		liboverlay \
-    libboringssl-compat
+    libboringssl-compat \
+		libgenlock
 
 # Ebtables
 PRODUCT_PACKAGES += \
