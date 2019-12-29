@@ -316,7 +316,7 @@ on boot
 on fs
     wait /dev/block/platform/soc.0/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc.0/${ro.boot.bootdevice} /dev/block/bootdevice
-    
+
     mount_all ./vendor/etc/fstab.qcom --early
 
     wait /dev/block/bootdevice/by-name/dsp
@@ -589,6 +589,7 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     -g@android:wpa_wlan0
     interface android.hardware.wifi.supplicant@1.0::ISupplicant default
     interface android.hardware.wifi.supplicant@1.1::ISupplicant default
+    interface android.hardware.wifi.supplicant@1.2::ISupplicant default
     class main
     socket wpa_wlan0 dgram 660 wifi wifi
     disabled
