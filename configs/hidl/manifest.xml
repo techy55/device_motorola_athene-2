@@ -1,6 +1,6 @@
-<!-- 
-    This is a skeleton device manifest. Notes: 
-    1. If a HAL is supported in both hwbinder and passthrough transport, 
+<!--
+    This is a skeleton device manifest. Notes:
+    1. If a HAL is supported in both hwbinder and passthrough transport,
        only hwbinder is shown.
     2. It is likely that HALs in passthrough transport does not have
        <interface> declared; users will have to write them by hand.
@@ -56,15 +56,6 @@
         <interface>
             <name>ICameraProvider</name>
             <instance>legacy/0</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.cas</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IMediaCasService</name>
-            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
