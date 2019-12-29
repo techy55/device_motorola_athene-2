@@ -525,16 +525,16 @@ service vendor.irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
 
 service vendor.imsqmidaemon /vendor/bin/imsqmidaemon
     class main
-    user radio
+    user system
     socket ims_qmid stream 0660 system radio
     group radio log diag
     writepid /dev/cpuset/system-background/tasks
 
 service vendor.imsdatadaemon /vendor/bin/imsdatadaemon
     class main
-    user radio
+    user system
     socket ims_datad stream 0660 system radio
-    group radio wifi inet log diag
+    group system wifi radio inet log diag
     writepid /dev/cpuset/system-background/tasks
     disabled
 
@@ -549,15 +549,15 @@ service vendor.rmt_storage /vendor/bin/rmt_storage
     shutdown critical
     writepid /dev/cpuset/system-background/tasks
 
-service vendor.ims_rtp_daemon /vendor/bin/ims_rtp_daemon
-    class main
-    user radio
-    socket ims_qmid stream 0660 system radio
-    group radio vendor_qti_diag inet log
+#service vendor.ims_rtp_daemon /vendor/bin/ims_rtp_daemon
+#    class main
+#    user system
+#    socket ims_qmid stream 0660 system radio
+#    group radio diag inet log
 
 #service vendor.imsrcsservice /vendor/bin/imsrcsd
 #    class main
-#    user radio
+#    user system
 #    group radio diag inet log
 #    writepid /dev/cpuset/system-background/tasks
 
