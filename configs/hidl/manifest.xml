@@ -100,7 +100,7 @@
         <interface>
             <name>IGnss</name>
             <instance>default</instance>
-            <instance>gnss_vendor</instance>
+            <instance>@1.0::IGnss/gnss_vendor</instance>
         </interface>
     </hal>
     <hal format="hidl">
