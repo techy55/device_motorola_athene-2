@@ -30,6 +30,11 @@ $(call inherit-product, vendor/motorola/athene/athene-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
+# Soong
+PRODUCT_BOARD_PLATFORM := msm8952
+PRODUCT_USES_QCOM_HARDWARE := true
+PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
+
 # Screen density
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
