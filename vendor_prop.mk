@@ -242,7 +242,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.vendor.radio.apm_sim_not_pwdn=1 \
 	persist.vendor.radio.lte_vrte_ltd=1 \
 	persist.vendor.radio.cs_srv_type=1 \
-	persist.vendor.radio.jbims=1
+	persist.vendor.radio.jbims=0
 
 # Rescue party
 PRODUCT_PROPERTY_OVERRIDES += \
